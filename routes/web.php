@@ -23,9 +23,61 @@ Route::get('/post/{id}' , function($id){
 // Route::get('/post/{id}/{name}' , function($id , $name){
 //     return "this is post  number" .$id . " " . $name;
 // });
+    Route::get('/post/{id}/{name}' , function($id , $name){
+        return "this is post number" .$id . " " . $name;
+    });
+    Route::get('admin' , function(){
+        return "Admin Dashboard";
+    });
 // // create a admin group
 // Route::group(['prefix' => 'admin'], function () {
 //     Route::get('/dashboard', function () {
 //         return "Admin Dashboard";
 //     });
 // });
+
+// controllers
+use App\Http\Controllers\UserController;
+//group route
+// Route::prefix('admin')->group(function(){
+
+// Route::get('/dashboard' , function(){
+//     return 'AdminDashboard';
+// });
+// Route::get('/AdminProfile' , function(){
+//     return 'Admin Profile';
+// });
+// });
+
+// // product create
+// Route::prefix('/product')->group(function(){
+
+//         Route::get('/create' , function(){
+//             return 'Create Product';
+//         });
+//         Route::get('/categories' , function(){
+//             return 'Product Categories';
+//         });
+//         Route::get('/tags' , function(){
+//             return 'Product Tags';
+// });
+// });
+Route::prefix('/users')->group(function(){
+    Route::get('/list' , function(){
+        return view('list');
+    });
+    Route::get('/create' , function(){
+        return  view('create');
+    });
+    Route::get('/profile' , function(){
+        return  view('profile');
+    });
+    Route::get('/category' ,function(){
+        return view('category');
+    });
+});
+
+
+// Route::get('/users' , [UserController::class , 'index']);
+// // Route::get('/pro')
+// Route::get('/users' ,[UserController::class , 'profile']);
