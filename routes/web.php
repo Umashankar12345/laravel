@@ -1,17 +1,27 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
-// use App\Http\Controllers\UmaController;
+// use App\Http\Controllers\ReservationController;
 
-use App\Http\controllers\studentController;
+// Route::get('/reservation', [ReservationController::class, 'create']);
+// Route::post('/reservation', [ReservationController::class, 'store']); -->
+
+use App\Http\Controllers\ReservationController;
+
+Route::get('/reservation', [ReservationController::class, 'create']);
+
+Route::post('/reservation', [ReservationController::class, 'store']);
+// use Illuminate\Support\Facades\Route;
+// // use App\Http\Controllers\UmaController;
+
+// use App\Http\controllers\studentController;
 
 
 // Route::get('/user' ,[UmaController::class , 'show']);
 
 
-Route::get('/student' ,[studentController::class , 'student']);
-Route::get('/students' ,[studentController::class , 'students']);
-Route::get('/course/{course}' ,[studentController::class , 'course']);
+// Route::get('/student' ,[studentController::class , 'student']);
+// Route::get('/students' ,[studentController::class , 'students']);
+// Route::get('/course/{course}' ,[studentController::class , 'course']);
 // Route::get('/', function () {
 //     return  view ("home");
 // });
