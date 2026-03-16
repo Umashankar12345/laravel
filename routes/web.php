@@ -5,11 +5,11 @@
 // Route::get('/reservation', [ReservationController::class, 'create']);
 // Route::post('/reservation', [ReservationController::class, 'store']); -->
 
-use App\Http\Controllers\ReservationController;
+// use App\Http\Controllers\ReservationController;
 
-Route::get('/reservation', [ReservationController::class, 'create']);
+// Route::get('/reservation', [ReservationController::class, 'create']);
 
-Route::post('/reservation', [ReservationController::class, 'store']);
+// Route::post('/reservation', [ReservationController::class, 'store']);
 // use Illuminate\Support\Facades\Route;
 // // use App\Http\Controllers\UmaController;
 
@@ -105,3 +105,73 @@ Route::post('/reservation', [ReservationController::class, 'store']);
 // });
 
 
+
+// Routing 
+//heaader
+ use Illuminate\Support\Facades\Route; 
+ use App\Http\Controllers\UserController;
+// Route::prefix('admin')->group(function(){
+//     Route::get('/users' , function(){
+
+//     });
+// });
+
+
+// Route::get('/header' , function() {
+//     return response("Hello world")
+//     ->header('content-Type' , 'text-plain')
+//     ->header('X-Custom-Header' , 'Laravel');
+// });
+
+
+// Route::get('/header' , function(){
+//         return response()->json([
+//             'name' => 'uma',
+//             'course' => 'Laravel',
+//             'age' => 38
+//         ]);
+// });
+
+// //cokkie 
+// Route::get('/set-cookie' , function(){
+//     return  response ("cookie set")
+//     ->cookie('username' , 'Ajay' , 1)
+//     ->cookie('role' , 'admin' , 1);
+// });
+// Route::get('get=cookie' , function(Illuminate\Http\Request $_request){
+//     return $request->cookie('username');
+// });
+
+// Route::get('/dashboard' , function(){
+//     // return 'This is a my dashboard page';
+//     return "  umasss Dashboard";
+// })->name('dashboard');
+
+// Route::get('/new-dashboard' , function(){
+//     // return redirect('/dashboard')
+//     return redirect() ->route('dashboard');
+//     // ->with('success' , 'Login Successful');
+// });
+
+//named route passed data in url 
+// Route::get('/dashboard/{name}',function($name){
+//     return   "welcome to dashboard". $name;
+// })->name('dashboard');
+
+// Route::get('/new-dashboard' , function(){
+//     return redirect() ->route('dashboard', ['name' => 'Uma'] );
+// });
+
+Route::get('/dashboard/{name}/{id}' ,function($name , $id){
+   
+      return "Welcome to your dashboard: Name = " . $name . " ID = " . $id;
+})->name('dashboard');
+
+Route::get('/new-dashboard' , function(){
+    return redirect() ->route('dashboard' ,[
+        'name' => 'Uma' ,
+         'id' => '234a'
+         ]);
+});
+
+//help of your controller

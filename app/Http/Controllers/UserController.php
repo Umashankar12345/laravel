@@ -1,19 +1,16 @@
 <?php
 
 namespace App\Http\Controllers;
+// namespace App\http\functions1;
+// namespace App\http\functions2;
 
 use Illuminate\Http\Request;
 
-class ReservationController extends Controller
-{
-    public function create()
-    {
-        return view('reservation');
-    }
 
-    public function store(Request $request)
-    {
-        $data = $request->all();
-        return view('reservation_result', compact('data'));
-    }
+class UserController extends Controller
+{
+    //
+  public class header(){
+return view 'Hello world'
+  }
 }
