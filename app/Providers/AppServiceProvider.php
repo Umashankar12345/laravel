@@ -13,12 +13,13 @@ class AppServiceProvider extends ServiceProvider
     {
         //
     }
-
+}
     /**
      * Bootstrap any application services.
-     */
-    public function boot(): void
-    {
-        //
-    }
-}
+    */
+//     public function boot(): void
+//     {
+//         view:: share('siteName')
+//         'My laravel website'
+//     }
+// }

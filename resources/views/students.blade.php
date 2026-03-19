@@ -1,1 +1,2 @@
 <h2>welcome , {{$name}}</h2>
+create a blade file  for a resturaant  include name , number of guestss , date of reservation , special requests (textarea)  after form submission , dispay the reservation details in new page

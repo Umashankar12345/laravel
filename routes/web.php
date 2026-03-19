@@ -108,8 +108,8 @@
 
 // Routing 
 //heaader
- use Illuminate\Support\Facades\Route; 
- use App\Http\Controllers\UserController;
+//  use Illuminate\Support\Facades\Route; 
+//  use App\Http\Controllers\UserController;
 // Route::prefix('admin')->group(function(){
 //     Route::get('/users' , function(){
 
@@ -162,16 +162,35 @@
 //     return redirect() ->route('dashboard', ['name' => 'Uma'] );
 // });
 
-Route::get('/dashboard/{name}/{id}' ,function($name , $id){
+// Route::get('/dashboard/{name}/{id}' ,function($name , $id){
    
-      return "Welcome to your dashboard: Name = " . $name . " ID = " . $id;
-})->name('dashboard');
+//       return "Welcome to your dashboard: Name = " . $name . " ID = " . $id;
+// })->name('dashboard');
 
-Route::get('/new-dashboard' , function(){
-    return redirect() ->route('dashboard' ,[
-        'name' => 'Uma' ,
-         'id' => '234a'
-         ]);
-});
+// Route::get('/new-dashboard' , function(){
+//     return redirect() ->route('dashboard' ,[
+//         'name' => 'Uma' ,
+//          'id' => '234a'
+//          ]);
+// });
 
-//help of your controller
+// //help of your controller
+// //login
+// Route::get('/login' , function(){
+//     $email = request('email');
+//     $password = request('password');
+//     if($email == "Uma@gmail.com" && password == "1234456y"){
+//         return redirect()->route('dashboard')
+//         ->with('success' , 'login Successful');
+//     }
+//     return redirect()->back()
+// 
+
+
+                            //unit3
+ use Illuminate\Support\Facades\Route; 
+  use Illuminate\Http\Request;
+use App\Http\Controllers\StudentCController;
+
+
+Route::get('/ab' , [StudentCController::class, 'student' ]);
