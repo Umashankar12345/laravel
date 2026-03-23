@@ -190,7 +190,26 @@
                             //unit3
  use Illuminate\Support\Facades\Route; 
   use Illuminate\Http\Request;
-use App\Http\Controllers\StudentCController;
+// use App\Http\Controllers\StudentCController;
+Use App\Http\Controllers\ProductController;
+use App\Http\Controllers\ApiController;
+use App\http\controllers\singleActionController;
+
+// Route::get('/ab' , [StudentCController::class, 'student' ]);
 
 
-Route::get('/ab' , [StudentCController::class, 'student' ]);
+// Route::get('/sudent-profile' , [studentCController::class, 'profile'])
+//product list
+// Route::get('/product' , [ProductController ::class , 'index']);
+
+// Route::get('/products{id}' , [productController::class, 'show']) ->name('product.show');
+
+// Route::get('/product-redirect' , [ProductController::class , 'redirectToproduct']);
+
+
+// Route::resource('products' , ProductController::class);
+
+// Route::apiResource('products' , ApiController::class);
+
+Route::get('/single' , SingleActionController::class);
+
