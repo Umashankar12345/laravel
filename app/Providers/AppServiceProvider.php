@@ -21,5 +21,5 @@ class AppServiceProvider extends ServiceProvider
 //     {
 //         view:: share('siteName')
 //         'My laravel website'
-//     }
+//    
 // }

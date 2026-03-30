@@ -213,3 +213,9 @@ use App\http\controllers\singleActionController;
 
 Route::get('/single' , SingleActionController::class);
 
+
+
+//middleware
+use App\Http\Controllers\UmaController;
+
+Route::get('/test', [UmaController::class, 'students']);

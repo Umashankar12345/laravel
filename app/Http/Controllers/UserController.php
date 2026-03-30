@@ -10,7 +10,7 @@ use Illuminate\Http\Request;
 class UserController extends Controller
 {
     //
-  public class header(){
-return view 'Hello world'
-  }
+//   public class header(){
+// return view 'Hello world'
+//   }
 }
