@@ -189,11 +189,11 @@
 
                             //unit3
  use Illuminate\Support\Facades\Route; 
-  use Illuminate\Http\Request;
+ // use Illuminate\Http\Request;
 // use App\Http\Controllers\StudentCController;
-Use App\Http\Controllers\ProductController;
-use App\Http\Controllers\ApiController;
-use App\http\controllers\singleActionController;
+// Use App\Http\Controllers\ProductController;
+// use App\Http\Controllers\ApiController;
+// use App\http\controllers\singleActionController;
 
 // Route::get('/ab' , [StudentCController::class, 'student' ]);
 
@@ -211,11 +211,17 @@ use App\http\controllers\singleActionController;
 
 // Route::apiResource('products' , ApiController::class);
 
-Route::get('/single' , SingleActionController::class);
+//Route::get('/single' , SingleActionController::class);
 
 
 
 //middleware
-use App\Http\Controllers\UmaController;
+//use App\Http\Controllers\UmaController;
 
-Route::get('/test', [UmaController::class, 'students']);
+// Route::get('/test', [UmaController::class, 'students']);
+Route::get('/test' , function(){
+    return view('welcome');
+});
+Route::get('/about' , function(){
+    return view('About');
+});
