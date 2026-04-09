@@ -235,7 +235,7 @@ use App\Http\Controllers\classController;
 // Route::get('/student', [classController::class, 'index']);
 
 
-Route::get('/home' , function(){
+Route::get(' /home' , function(){
     return view('home');
 })->name('home');
 
