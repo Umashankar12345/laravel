@@ -15,10 +15,10 @@ class AgeCheck
      */
     public function handle(Request $request, Closure $next): Response
     {
-        echo "age check";
-        if($request->age < 20){
-            die("You are not aligible for this site");
-        }
+       
+        // if($request->age < 20){
+        //     die("You are not aligible for this site");
+        // }
         return $next($request);
     }
 }
