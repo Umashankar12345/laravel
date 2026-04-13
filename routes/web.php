@@ -235,11 +235,19 @@ use App\Http\Controllers\classController;
 // Route::get('/student', [classController::class, 'index']);
 
 
-Route::get(' /home' , function(){
-    return view('home');
-})->name('home');
+// Route::get(' /home' , function(){
+//     return view('home');
+// })->name('home');
 
-Route::get('/about' , function(){
-    return view('about');
-})->name('about');
-Route::get('/class', [classController::class, 'index']);
+// Route::get('/about' , function(){
+//     return view('about');
+// })->name('about');
+// Route::get('/class', [classController::class, 'index']);
+
+                //secuity purpose 
+
+              Route::get('/dashboard' , function(){
+                return view('dashboard');
+              })->middleware('auth');
+
+              require __DIR__.'/auth.php';
