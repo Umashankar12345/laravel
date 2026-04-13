@@ -246,8 +246,18 @@ use App\Http\Controllers\classController;
 
                 //secuity purpose 
 
-              Route::get('/dashboard' , function(){
-                return view('dashboard');
-              })->middleware('auth');
+            //   Route::get('/dashboard' , function(){
+            //     return view('dashboard');
+            //   })->middleware('auth');
 
-              require __DIR__.'/auth.php';
+            //   require __DIR__.'/auth.php';
+
+
+          Route::domain('admin.mysite.com')->group(function(){
+    Route::get('/' , function(){
+        return 'this is admin dashboard';
+    });
+    Route::get('/users' , function(){
+        return 'this is admin users page';
+    });
+          });
