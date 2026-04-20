@@ -188,7 +188,7 @@
 
 
                             //unit3
- use Illuminate\Support\Facades\Route; 
+//  use Illuminate\Support\Facades\Route; 
  // use Illuminate\Http\Request;
 // use App\Http\Controllers\StudentCController;
 // Use App\Http\Controllers\ProductController;
@@ -230,7 +230,7 @@
 // Route::get('/home' ,  function(){
 //     return view('home');
 // });
-use App\Http\Controllers\classController;
+// use App\Http\Controllers\classController;
 
 // Route::get('/student', [classController::class, 'index']);
 
@@ -253,11 +253,84 @@ use App\Http\Controllers\classController;
             //   require __DIR__.'/auth.php';
 
 
-          Route::domain('admin.mysite.com')->group(function(){
-    Route::get('/' , function(){
-        return 'this is admin dashboard';
-    });
-    Route::get('/users' , function(){
-        return 'this is admin users page';
-    });
-          });
+    //       Route::domain('admin.mysite.com')->group(function(){
+    // Route::get('/' , function(){
+    //     return 'this is admin dashboard';
+    // });
+    // Route::get('/users' , function(){
+    //     return 'this is admin users page';
+    // });
+    //       });
+
+
+// use Illuminate\Support\Facades\Route;
+// use App\Http\Controllers\HoController;
+
+// Route::domain('admin.localhost')
+//     ->middleware('check.user')
+//     ->group(function () {
+
+//         Route::get('/home', [HoController::class, 'index']);
+
+//     });
+
+
+// use Illuminate\Support\Facades\Route;
+// use App\Http\Controllers\HoController;
+
+// Route::domain('admin.localhost')
+//     ->middleware('check.user')
+//     ->group(function () {
+
+//         Route::get('/home', [HoController::class, 'index']);
+
+//     });
+    //create a named route  any other named route function and return route 
+//     Route::get('/home', function () {
+//     return "Home Page";
+// })->name('home.page');
+
+// Route::get('/show-name', function () {
+//     return request()->route()->getName();
+// })->name('show.name');
+
+
+//unit 4
+
+use Illuminate\Support\Facades\Route;
+use Illuminate\Http\Request;
+use App\Http\Controllers\UploadController;
+
+Route::get('/dashboard' , function(Request $request){
+//if i want to check particular methods 
+if($request->has('name')){
+    return $request->name
+}
+return $request->age;
+
+if($request->filled('name')){
+    return $request->name
+}
+return $request->age;
+
+return $request->only('name' , 'age');
+
+return[
+    'except' => $request->except(['age' ,'course'])
+        'only' => $request->only(['name' , 'age'])
+        'all' => $request->all()
+        'using-input' => $request->input('name')
+        'course' => $request->input('course' , 'Laravel')
+        'filed' => $request->filled('name') ? ' filled' :  'not filled'
+        'has' => $request->has('name') ? 'input name exist' : 'input name does not exist'
+        default => $request->input('AGE' , '34')
+    
+];
+    // return $request->name;
+    // return $request->age;
+    // return request()->input('name ', 'age');
+    //  return $request->input('name') . ' ' . $request->input('age');
+
+});
+// field button check  ifutton is empty or not 
+
