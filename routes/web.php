@@ -342,7 +342,7 @@
 
 use Illuminate\Support\Facades\Route;
 // use Illuminate\Http\Mail;
-use App\Http\Controllers\MailController; // 
+use App\Http\Controllers\MailController; 
 // use App\Http\Controllers\UploadController;
 
 Route::get('/send-mail' , [MailController::class , 'sendMail']);

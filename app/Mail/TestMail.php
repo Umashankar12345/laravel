@@ -2,30 +2,30 @@
 
 namespace App\Mail;
 
-use Illuminate\Bus\Queueable;
-use Illuminate\Contracts\Queue\ShouldQueue;
+// use Illuminate\Bus\Queueable;
+// use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Mail\Mailable;
-use Illuminate\Mail\Mailables\Content;
-use Illuminate\Mail\Mailables\Envelope;
-use Illuminate\Queue\SerializesModels;
+// use Illuminate\Mail\Mailables\Content;
+// use Illuminate\Mail\Mailables\Envelope;
+// use Illuminate\Queue\SerializesModels;
 
 class TestMail extends Mailable
 {
-    use Queueable, SerializesModels;
+    //use Queueable, SerializesModels;
 
     public function build(){
-        return this->view('emails.test')->subject('Test Mail Subject');
+        return  $this->view('emails.test')->subject('Test Mail Subject');
     }
     /**
      * Create a new message instance.
      */
-    public function __construct()
-    {
-        //
-        this->name= $name;
-    }
-
-    /**
+    // public function __construct()
+    // {
+    //     //
+    //     this->name= $name;
+    // }
+}
+    /**$
      * Get the message envelope.
      */
 //     public function envelope(): Envelope
