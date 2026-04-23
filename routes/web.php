@@ -341,10 +341,14 @@
 
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\UploadController;
+// use Illuminate\Http\Mail;
+use App\Http\Controllers\MailController; // 
+// use App\Http\Controllers\UploadController;
+
+Route::get('/send-mail' , [MailController::class , 'sendMail']);
 
 // Route::get('/simple-form' ,[FormController::class , 'showForm']);
 // Route::post('/submit-form' , [FormController::class , 'submitForm']);
 
-Route::get('/upload' ,[UploadController::class , 'showUploadForm']);
-Route::post('/upload' , [UploadController::class , 'upload']);
+// Route::get('/upload' ,[UploadController::class , 'showUploadForm']);
+// Route::post('/upload' , [UploadController::class , 'upload']);
