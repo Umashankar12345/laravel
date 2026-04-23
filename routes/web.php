@@ -297,11 +297,11 @@
 
 //unit 4
 
-use Illuminate\Support\Facades\Route;
-use Illuminate\Http\Request;
-use App\Http\Controllers\UploadController;
+// use Illuminate\Support\Facades\Route;
+// use Illuminate\Http\Request;
+// use App\Http\Controllers\UploadController;
 
-Route::get('/dashboard' , function(Request $request){
+// Route::get('/dashboard' , function(Request $request){
 //if i want to check particular methods 
 // if($request->has('name')){
 //     return $request->name
@@ -315,20 +315,20 @@ Route::get('/dashboard' , function(Request $request){
 
 // return $request->only('name' , 'age');
 
-return[
-    'except' => $request->except(['age' ,'course']),
-        'only' => $request->only(['name' , 'age']),
-       // 'all' => $request->all()
-        'using-input' => $request->input('name'),
-        'course' => $request->input('course' , 'Laravel'),
-        'filed' => $request->filled('name') ? ' filled' :  'not filled',
-        'has' => $request->has('name') ? 'input name exist' : 'input name does not exist',
-        isMethod('post') => $request->isMethod('post') ? 'This is a POST request' : 'This is not a POST request',
-        default => $request->input('AGE' , '34'),
-        'using-only' => $request->only(['name' , 'age'])
-        'using-query' => $request->query('name' , 'default name')
-        'headers'=> $request->header('Authenization'),
-            ])->cookie('theme', 'dark', 60); // ✅ SET cookie
+// return[
+//     'except' => $request->except(['age' ,'course']),
+//         'only' => $request->only(['name' , 'age']),
+//        // 'all' => $request->all()
+//         'using-input' => $request->input('name'),
+//         'course' => $request->input('course' , 'Laravel'),
+//         'filed' => $request->filled('name') ? ' filled' :  'not filled',
+//         'has' => $request->has('name') ? 'input name exist' : 'input name does not exist',
+//         isMethod('post') => $request->isMethod('post') ? 'This is a POST request' : 'This is not a POST request',
+//         default => $request->input('AGE' , '34'),
+//         'using-only' => $request->only(['name' , 'age'])
+//         'using-query' => $request->query('name' , 'default name')
+//         'headers'=> $request->header('Authenization'),
+//             ])->cookie('theme', 'dark', 60); // ✅ SET cookie
         //])->without cookie('theme' , 'dark');
 
     // return $request->name;
@@ -336,6 +336,13 @@ return[
     // return request()->input('name ', 'age');
     //  return $request->input('name') . ' ' . $request->input('age');
 
-});
+// });
 // field button check  ifutton is empty or not 
+
+
+use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\FormController;
+
+Route::get('/simple-form' ,[FormController::class , 'showForm']);
+Route::post('/submit-form' , [FormController::class , 'submitForm']);
 
