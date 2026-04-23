@@ -341,8 +341,10 @@
 
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\FormController;
+use App\Http\Controllers\UploadController;
 
-Route::get('/simple-form' ,[FormController::class , 'showForm']);
-Route::post('/submit-form' , [FormController::class , 'submitForm']);
+// Route::get('/simple-form' ,[FormController::class , 'showForm']);
+// Route::post('/submit-form' , [FormController::class , 'submitForm']);
 
+Route::get('/upload' ,[UploadController::class , 'showUploadForm']);
+Route::post('/upload' , [UploadController::class , 'upload']);
