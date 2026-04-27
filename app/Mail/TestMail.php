@@ -14,7 +14,7 @@ class TestMail extends Mailable
     //use Queueable, SerializesModels;
 
     public function build(){
-        return  $this->view('emails.test')->subject('Test Mail Subject');
+        return  $this->view('emails.test')->subject('Umashankar kumar ');
     }
     /**
      * Create a new message instance.
