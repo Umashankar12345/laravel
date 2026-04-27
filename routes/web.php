@@ -345,10 +345,45 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MailController; 
 // use App\Http\Controllers\UploadController;
 
-Route::get('/send-mail' , [MailController::class , 'sendMail']);
+// Route::get('/send-mail' , [MailController::class , 'sendMail']);
 
 // Route::get('/simple-form' ,[FormController::class , 'showForm']);
 // Route::post('/submit-form' , [FormController::class , 'submitForm']);
 
 // Route::get('/upload' ,[UploadController::class , 'showUploadForm']);
 // Route::post('/upload' , [UploadController::class , 'upload']);
+
+
+
+                    //session
+//single value
+
+Route::get('/' , function(Request $request){
+    return[
+        'using-put' => $request->session()->put('name' , 'Uma'),
+        'using-put-multiple' => $request->session()->put(['name' => 'Uma' , 'age' => 38 , 'city' => 'Bangalore']),
+
+        
+    ];
+    });
+
+    // ret
+//     $request->session()->put('email' , 'umashanakrkumar9572@gmil.com');
+//      $request->session()->put('name' , 'Uma' , 'age' => 24);
+//      $request->session()->put('city' , "Bangalore");
+//      $request->session()->put('course' ,[]);
+//      $request->session() ->push('course' , 'Laravel');
+//      $request->session() ->flash('message' , sumit succesfully);
+//      $request->session()->now('message' , )
+
+     
+//     // return $request->session()->get('name');
+
+//     // $request->session()->put('name' , 'Uma');
+//     // $request->session()->put('age' , 38);
+//     // return $request->session()->all();
+
+//     // $request->session()->put('name' , 'Uma');
+//     // $request->session()->put('age' , 38);
+//     // return $request->session()->only(['name' , 'age']);  
+// })
