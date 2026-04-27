@@ -13,7 +13,7 @@ class MailController extends Controller
 
     public function sendMail()
     {
-        Mail::to('ishikashikal603@gmail.com')->send(new TestMail());
+        Mail::to('ishikaishikal603@gmail.com')->send(new TestMail());
 
         return "Email sent successfully";
     }
