@@ -342,7 +342,7 @@
 
 use Illuminate\Support\Facades\Route;
 // use Illuminate\Http\Mail;
-use App\Http\Controllers\MailController; 
+// use App\Http\Controllers\MailController; 
 // use App\Http\Controllers\UploadController;
 
 // Route::get('/send-mail' , [MailController::class , 'sendMail']);
@@ -358,16 +358,16 @@ use App\Http\Controllers\MailController;
                     //session
 //single value
 
-Route::get('/' , function(Request $request){
-    return[
-        'using-put' => $request->session()->put('name' , 'Uma'),
-        'using-put-multiple' => $request->session()->put(['name' => 'Uma' , 'age' => 38 , 'city' => 'Bangalore']),
+// Route::get('/' , function(Request $request){
+//     return[
+//         'using-put' => $request->session()->put('name' , 'Uma'),
+//         'using-put-multiple' => $request->session()->put(['name' => 'Uma' , 'age' => 38 , 'city' => 'Bangalore']),
 
         
-    ];
-    });
+//     ];
+//     });
 
-    // ret
+    
 //     $request->session()->put('email' , 'umashanakrkumar9572@gmil.com');
 //      $request->session()->put('name' , 'Uma' , 'age' => 24);
 //      $request->session()->put('city' , "Bangalore");
@@ -384,6 +384,21 @@ Route::get('/' , function(Request $request){
 //     // return $request->session()->all();
 
 //     // $request->session()->put('name' , 'Uma');
-//     // $request->session()->put('age' , 38);
+// on    // $request->session()->put('age' , 38);
 //     // return $request->session()->only(['name' , 'age']);  
 // })
+
+// Rote::get('/get' , function(request $request){
+//     return[
+//         'get' => $request->session()->get('countries'),
+//         'get' => $request->session()->get('domain'),
+//         'get' => $request->session()->get('age'),
+//         'get' => $request->session()->get('all'),
+//         'session' => session('company-name'),
+//         'all'=> $request->session()->all()
+//     ]
+// })
+use App\Http\Controllers\FormsController;
+
+Route::get('/form' , [FormsController::class , 'showForm']);
+Route::post('/submit-form' , [FormsController::class , 'submitForm']);
