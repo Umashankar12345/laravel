@@ -400,5 +400,5 @@ use Illuminate\Support\Facades\Route;
 // })
 use App\Http\Controllers\FormsController;
 
-Route::get('/form' , [FormsController::class , 'showForm']);
-Route::post('/submit-form' , [FormsController::class , 'submitForm']);
+Route::get('/Form' , [FormsController::class , 'showForm']);
+Route::post('/submit-Form' , [FormsController::class , 'submitForm']);
