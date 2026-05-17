@@ -6,9 +6,9 @@ use Illuminate\Http\Request;
 
 class FormsController extends Controller
 {
-    //
+    
     public function showForm(){
-        return view ('form1');
+        return view ('form');
     }
     public function submitForm(Request $request)
 {

@@ -398,7 +398,7 @@ use Illuminate\Support\Facades\Route;
 //         'all'=> $request->session()->all()
 //     ]
 // })
-use App\Http\Controllers\FormsController;
+use App\Http\Controllers\studentForm;
 
-Route::get('/Form' , [FormsController::class , 'showForm']);
-Route::post('/submit-Form' , [FormsController::class , 'submitForm']);
+ Route::get('/form' , [studentForm::class , 'showForm']);
+Route::post('/submit-form' , [studentForm::class , 'store']);

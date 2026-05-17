@@ -24,7 +24,7 @@
 @endif
 
 
-<form action="{{ url('submit-Form') }}" method="POST" enctype="multipart/form-data">
+<form action="{{ url('submit-form') }}" method="POST" enctype="multipart/form-data">
 
     @csrf
 
