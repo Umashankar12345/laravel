@@ -340,7 +340,7 @@
 // field button check  ifutton is empty or not 
 
 
-use Illuminate\Support\Facades\Route;
+//use Illuminate\Support\Facades\Route;
 // use Illuminate\Http\Mail;
 // use App\Http\Controllers\MailController; 
 // use App\Http\Controllers\UploadController;
@@ -398,7 +398,47 @@ use Illuminate\Support\Facades\Route;
 //         'all'=> $request->session()->all()
 //     ]
 // })
-use App\Http\Controllers\studentForm;
+// use App\Http\Controllers\studentForm;
 
- Route::get('/form' , [studentForm::class , 'showForm']);
-Route::post('/submit-form' , [studentForm::class , 'store']);
+//  Route::get('/form' , [studentForm::class , 'showForm']);
+// Route::post('/submit-form' , [studentForm::class , 'store']);
+
+// use App\Models\Student;
+
+// Route::get('/insert', function () {
+
+//     Student::create([
+//         'name' => 'Rahul',
+//         'age' => 22,
+//         'email' => 'rahul@gmail.com'
+//     ]);
+
+//     return "Data Inserted";
+// });
+
+              //revision
+
+// use Illuminate\Support\Facades\Route;
+
+// Route::get('/' , function(){
+//     return "<h1>home Page </h1>";
+// })->name('home');
+
+
+// Route::prefix('page')->group(function(){
+//     Route::get('/about' , function(){
+//         return "<h1>About Page </h1>";
+//     });
+
+//     Route::get('/gallery' , function(){
+//         return "<h1>Gallery page </h1>";
+//     });
+//     Route::get('/post/firstpost' , function(){
+//         return "<h1>First Post </h1>";
+//     });
+// });
+
+
+Route::get('/' , function(){
+    return view('welcome');
+});
