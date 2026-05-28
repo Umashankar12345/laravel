@@ -9,15 +9,15 @@ return new class extends Migration
     /**
      * Run the migrations.
      */
-    public function up(): void
-    {
-       if (Schema::hasTable('uma') && !Schema::hasTable('uma_')) {
-    Schema::rename('uma', 'uma_');
-}
-        Schema::dropIfExists('umashankars');
-        Schema::dropIfExists('students');
-        Schema::dropIfExists('umashanakars');
+   public function up(): void
+{
+    if (
+        Schema::hasTable('practice') &&
+        !Schema::hasTable('practices')
+    ) {
+        Schema::rename('practice', 'practices');
     }
+}
 
     /**
      * Reverse the migrations.

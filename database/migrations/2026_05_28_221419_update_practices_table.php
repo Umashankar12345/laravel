@@ -11,7 +11,10 @@ return new class extends Migration
      */
     public function up(): void
     {
-        //
+        Schema::table('practices' , function(Blueprint $table){
+           // $table->id();
+          $table->string('percenatage');
+        });
     }
 
     /**
