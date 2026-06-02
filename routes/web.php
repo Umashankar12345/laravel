@@ -451,8 +451,14 @@
 
 
     //blogs
-    use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\Blogcontroller;
+//     use Illuminate\Support\Facades\Route;
+// use App\Http\Controllers\Blogcontroller;
 
-    Route::get('/posts' , [Blogcontroller::class , 'index']);
-    Route::get('posts/{id}' , [Blogcontroller::class ,'show']);
+//     Route::get('/posts' , [Blogcontroller::class , 'index']);
+//     Route::get('posts/{id}' , [Blogcontroller::class ,'show']);
+
+
+        //api
+        use Illuminate\Support\Facades\Route;
+        use App\Http\Controllers\ApiController;
+        Route::get('/students' , [ApiController::class , 'index']);
