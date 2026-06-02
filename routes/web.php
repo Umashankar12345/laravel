@@ -442,6 +442,17 @@
 // Route::get('/' , function(){
 //     return view('welcome');
 // });
-use App\Http\Controller\ormeloquentcontroller ;
+// use App\Http\Controller\ormeloquentcontroller ;
+// use App\Http\Controllers\ormeloquentReadcontroller;
 
-Route::post("/store" , [ormeloquentcontroller ::class , 'store']);
+// // Route::post("/store" , [ormeloquentcontroller ::class , 'store']);
+
+// Route::get('/show' , [ormeloquentReadcontroller::class , 'index']);
+
+
+    //blogs
+    use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Blogcontroller;
+
+    Route::get('/posts' , [Blogcontroller::class , 'index']);
+    Route::get('posts/{id}' , [Blogcontroller::class ,'show']);
