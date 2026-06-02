@@ -439,6 +439,9 @@
 // });
 
 
-Route::get('/' , function(){
-    return view('welcome');
-});
+// Route::get('/' , function(){
+//     return view('welcome');
+// });
+use App\Http\Controller\ormeloquentcontroller ;
+
+Route::post("/store" , [ormeloquentcontroller ::class , 'store']);
