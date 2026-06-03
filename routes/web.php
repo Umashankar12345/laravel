@@ -472,8 +472,19 @@
 
 //formm
 
-use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\formmcontroller;
+// use Illuminate\Support\Facades\Route;
+// use App\Http\Controllers\formmcontroller;
 
-Route::get('/formm' , [formmcontroller::class , 'index']);
-Route::post('/formm' , [formmcontroller::class , 'store']);
+// Route::get('/formm' , [formmcontroller::class , 'index']);
+// Route::post('/formm' , [formmcontroller::class , 'store']);
+
+//file upoload
+
+use Illuminate\Support\Facades\Route;
+use App\Http\controllers\fileUploadController;
+
+Route::get('/upload' , function(){
+    return view('fileUpload');
+});
+
+Route::post('/upload' , [fileUploadController::class , 'upload']);
