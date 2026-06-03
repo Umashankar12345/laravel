@@ -459,6 +459,21 @@
 
 
         //api
-        use Illuminate\Support\Facades\Route;
-        use App\Http\Controllers\ApiController;
-        Route::get('/students' , [ApiController::class , 'index']);
+        // use Illuminate\Support\Facades\Route;
+        // use App\Http\Controllers\ApiController;
+        // Route::get('/students' , [ApiController::class , 'index']);
+
+
+        //user registration
+//       use Illuminate\Support\Facades\Route;
+// use App\Http\Controllers\RegistrationnController;
+//       Route::get('/Registrationn' , [RegistrationnController::class , 'index']);
+//       Route::post('/Registrationn' , [RegistrationnController::class , 'store']);
+
+//formm
+
+use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\formmcontroller;
+
+Route::get('/formm' , [formmcontroller::class , 'index']);
+Route::post('/formm' , [formmcontroller::class , 'store']);
