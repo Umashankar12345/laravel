@@ -480,11 +480,27 @@
 
 //file upoload
 
+// use Illuminate\Support\Facades\Route;
+// use App\Http\controllers\fileUploadController;
+
+// Route::get('/upload' , function(){
+//     return view('fileUpload');
+// });
+
+// Route::post('/upload' , [fileUploadController::class , 'upload']);
+
+// use Illuminate\Support\Facades\Route;
+// use App\Http\Controllers\updaterecordcontroller;
+
+// Route::get('/update-user' , [updaterecordcontroller::class , 'index']);
+// Route::post('/update-user' , [updaterecordcontroller::class , 'update']);
+
 use Illuminate\Support\Facades\Route;
-use App\Http\controllers\fileUploadController;
+use App\Http\Controllers\CookiesController;
 
-Route::get('/upload' , function(){
-    return view('fileUpload');
-});
+Route::get('/cookies' , [CookiesController::class , 'index']);
 
-Route::post('/upload' , [fileUploadController::class , 'upload']);
+Route::post('/setcookie' , [CookiesController::class , 'setcookie']);
+
+Route::get('/getcookie' , [CookiesController::class , 'getcookie']);
+
