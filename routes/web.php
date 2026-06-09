@@ -495,12 +495,47 @@
 // Route::get('/update-user' , [updaterecordcontroller::class , 'index']);
 // Route::post('/update-user' , [updaterecordcontroller::class , 'update']);
 
+// use Illuminate\Support\Facades\Route;
+// use App\Http\Controllers\CookiesController;
+
+// Route::get('/cookies' , [CookiesController::class , 'index']);
+
+// Route::post('/setcookie' , [CookiesController::class , 'setcookie']);
+
+// Route::get('/getcookie' , [CookiesController::class , 'getcookie']);
+
+// use Illuminate\Support\Facades\Route;
+// // use App\Http\Controllers\CookiesController;
+// use App\Http\Controllers\loginController;
+
+// Route::get('/login' , [LoginController::class , 'index']);
+
+// Route::post('/login' , [LoginController::class , 'login']);
+
+// Route::get('/profiles' , [LoginController::class , 'profiles']);
+
+// Route::get('/logout' , [LoginController::class , 'logout']);
+// use App\Http\Controllers\SwitchController;
+
+// Route::get('/switch',
+//     [SwitchController::class,'index']);
+
+// Route::post('/switch',
+//     [SwitchController::class,'show']);
+
+
+
+
+
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\CookiesController;
+use App\Http\Controllers\PostController;
 
-Route::get('/cookies' , [CookiesController::class , 'index']);
+Route::prefix('admin')->group(function () {
 
-Route::post('/setcookie' , [CookiesController::class , 'setcookie']);
+    Route::get('/posts', [PostController::class,'index']);
 
-Route::get('/getcookie' , [CookiesController::class , 'getcookie']);
+    Route::get('/posts/create', [PostController::class,'create']);
 
+    Route::post('/posts/store', [PostController::class,'store']);
+
+});
